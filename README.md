@@ -39,9 +39,7 @@ Compiled code for production can be found in the dist directory. (dist directory
 ```
 .
 ├── app/
-|   ├── index.njk
-|   ├── ...
-|   ├── about.njk
+|   ├── index.html
 |   ├── assets/
 |   |   ├── bootstrap/
 |   |   ├── ...
@@ -54,38 +52,11 @@ Compiled code for production can be found in the dist directory. (dist directory
 |   ├── php/
 |   ├── scss/
 |   |   ├── main.scss
-|   |   ├── ...
-|   |   └── theme.scss
-|   ├── snippets/
-|   |   ├── snippets.html
-|   |   ├── snippets.js
-|   |   └── snippets.scss
-|   ├── templates/
-|   |   ├── index.njk
-|   |   ├── burger-1.njk
-|   |   ├── burger-2.njk
-|   |   ├── burger-3.njk
-|   |   └── burger-4.njk
-|   ├── scss/
 |   └── templates/
-|       ├── header.njk
-|       |   └── header.njk
-|       |       ├── head.njk
-|       |       ├── ...
-|       |       └── nav.njk
-|       ├── ...
-|       ├── footer.njk
-|       |   ├── ...
-|       |   └── copyright.njk
-|       └── macros.njk
-|           ├── macros.njk
-|           ├── ...
-|           └── macros(n).njk
+|       ├── template.html
 |
 ├── dev/
 |   ├── index.html
-|   ├── ...
-|   ├── about.html
 |   ├── assets/
 |   ├── css/
 |   ├── js/
