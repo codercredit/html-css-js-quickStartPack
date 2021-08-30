@@ -17,6 +17,7 @@ Use this guide as a way to quickly start any new project.
 - [Structure](#structure)
 - [List of packages used](#list-of-packages-used)
 - [Need help?](#need-help)
+- [Nunjucks](#nunjucks)
 
 ---
 
@@ -25,13 +26,13 @@ Use this guide as a way to quickly start any new project.
 ### Install dependencies:
 
 ```
-npm i
+npm i or yarn
 ```
 
 ## Usage
 
 ```
-npm run watch
+npm run watch or yarn run watch
 ```
 
 This task copies all the files necessary for the project to the "dev" directory and will start a new server, open up a browser and watch for any SCSS, JS, PHP changes; once it compiles those changes, the browser will automatically reload page with injected the changes!
@@ -39,7 +40,7 @@ This task copies all the files necessary for the project to the "dev" directory 
 ## Production
 
 ```
-npm run build
+npm run build or yarn run build
 ```
 
 Copies all the files necessary for the project to the "dist" directory. Before copy compiles SCSS to CSS & add vendor prefixes.
@@ -99,11 +100,11 @@ Nunjucks by Mozilla official project: https://mozilla.github.io/nunjucks/
 
 ## Need help?
 
-Feel free to [create an issue](https://github.com/mnyorba/nunjucks-starter/issues), [tweet me](http://twitter.com/m_nyorba), or [send me an email](mailto:mnyorba@gmail.com). I'd be glad to help where I can!
+Feel free to [create an issue](https://github.com/codercredit/html-css-js-quickStartPack/issues), [facebook me](https://www.facebook.com/webcodermehadi), or [send me an email](mailto:webcodermehadi@gmail.com). I'd be glad to help where I can!
 
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
-Copyright (c) 2019 [MNyorba]
+Copyright (c) 2021 [codercredit]
 
 ## Nunjucks
