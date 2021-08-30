@@ -1,4 +1,6 @@
-# nunjucks starter
+# InsightTheme HTML CSS Starter
+
+InsightTheme Visit: https://themeforest.net/user/insighttheme
 
 ### HTML ctarter template development with Gulp,Sass &amp; Nunjucks
 
@@ -13,7 +15,7 @@ Use this guide as a way to quickly start any new project.
 * [Need help?](#need-help)
 ***
 ## Getting Started / Installation
-Download and unzip: https://github.com/mnyorba/nunjucks-starter/archive/master.zip   
+  
 ### Install dependencies: 
 ```
 npm i
