@@ -1,6 +1,8 @@
 # InsightTheme HTML CSS Starter
 
-InsightTheme ### Themeforest Visit: https://themeforest.net/user/insighttheme
+### Themeforest
+
+Visit: https://themeforest.net/user/insighttheme
 
 ### HTML ctarter template development with Gulp,Sass &amp; Nunjucks
 
@@ -62,6 +64,9 @@ Compiled code for production can be found in the dist directory. (dist directory
 |   |   └── custom.js
 |   ├── php/
 |   ├── scss/
+|   |   ├── helpers/_media-query.scss
+|   |   ├── helpers/_mixins.scss
+|   |   ├── helpers/_variables.scss
 |   |   ├── main.scss
 |   └── templates/
 |       ├── template.html
