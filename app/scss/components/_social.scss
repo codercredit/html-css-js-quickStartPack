@@ -1,0 +1,21 @@
+.headerSocial {
+  &__list {
+    display: inline-flex;
+    & > li {
+      margin-left: 25px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:hover {
+        & > a {
+          & > svg {
+            & > path {
+              stroke: $colorPrimary;
+              @include transitionSmooth;
+            }
+          }
+        }
+      }
+    }
+  }
+}

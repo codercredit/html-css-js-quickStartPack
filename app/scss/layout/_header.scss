@@ -1,0 +1,55 @@
+.headerTopBar {
+  &__item {
+    padding: 5px 20px 5px 0;
+    position: relative;
+    margin-right: 20px;
+    &::after {
+      background-color: rgba($colorDarkFour, $alpha: 0.4);
+      @include absolute-right-top;
+      content: "";
+      width: 1px;
+      height: 100%;
+    }
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__quote {
+    &:hover {
+      & > a {
+        color: $colorPrimary;
+      }
+    }
+  }
+}
+.header-notify {
+  &__icon {
+    padding-left: 15px;
+    .icon {
+      & > path {
+        @include transitionSmooth;
+      }
+    }
+  }
+  &:hover {
+    .icon {
+      & > path {
+        stroke: $colorPrimary;
+        @include transitionSmooth;
+        transform: rotate(10deg);
+      }
+    }
+  }
+}
+// Logo Burger Menu Social
+.headerMiddle {
+  position: relative;
+  &--bg {
+    padding: 30px 0;
+    @extend .bg-centerized;
+  }
+}

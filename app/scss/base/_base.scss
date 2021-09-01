@@ -1,0 +1,52 @@
+// Heading
+.shadeBg {
+  background-color: $colorShade;
+}
+.colorSecondary {
+  color: $colorSecondary;
+}
+.fontPrimary {
+  font-family: $fontPrimary;
+}
+.fontSecondary {
+  font-family: $fontSecondary;
+}
+.wh-100 {
+  width: 100%;
+  height: 100%;
+}
+.after-before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.hidden-transition {
+  opacity: 0;
+  visibility: hidden;
+  @include transitionSmooth;
+}
+.visible-transition {
+  opacity: 1;
+  visibility: visible;
+  @include transitionSmooth;
+}
+
+.letter--spacing05 {
+  letter-spacing: 0.05em;
+}
+
+.bg-centerized {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+svg, path, .icon {
+    @include transitionSmooth;
+}
+.border-top {
+    border-top: 1px solid rgba($colorDarkFive, $alpha: 0.25);
+}

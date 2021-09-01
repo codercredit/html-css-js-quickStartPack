@@ -1,0 +1,36 @@
+.header-search {
+  position: relative;
+  &__input,
+  &__input::placeholder {
+    border: 0;
+    background-color: transparent;
+    @extend .letter--spacing05;
+    @extend .colorSecondary;
+    font-family: $fontPrimary;
+    font-size: 16px;
+  }
+  &__button {
+    background-color: transparent;
+    border: 0;
+    .icon {
+        @include transitionSmooth;
+      & > path {
+        @include transitionSmooth;
+      }
+    }
+  }
+  &:hover {
+    .header-search {
+      &__button {
+        .icon {
+          transform: rotate(90deg);
+          @include transitionSmooth;
+          & > path {
+            stroke: $colorPrimary;
+            @include transitionSmooth;
+          }
+        }
+      }
+    }
+  }
+}

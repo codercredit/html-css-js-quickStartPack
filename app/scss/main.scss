@@ -3,12 +3,14 @@
 // 1. Configuration and helpers
 @import "helpers/variables";
 @import "helpers/media-query";
+@import "helpers/function";
 @import "helpers/mixins";
 
 // 2. Vendors
 
 // 3. Base stuff
 @import "base/reset";
+@import "base/base";
 @import "base/typography";
 
 // 4. Layout-related sections
@@ -23,6 +25,11 @@
 @import "components/buttons";
 @import "components/carousel";
 @import "components/slider";
+@import "components/lang";
+@import "components/headerSearch";
+@import "components/headerBurgerMenu";
+@import "components/social";
+@import "components/navbarOne";
 
 // 6. Page-specific styles
 @import "pages/home";
@@ -32,7 +39,3 @@
 // 7. Themes
 @import "themes/theme";
 @import "themes/admin";
-
-.demo {
-  color: red;
-}
