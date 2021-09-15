@@ -2,11 +2,10 @@
   "name": "nunjucks-html-starter",
   "version": "1.0.1",
   "description": "HTML ctarter template development with Gulp,Sass & Nunjucks",
-  "author": "mnyorba",
-  "license": "MIT",
+  "author": "codercredit",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mnyorba/nunjucks-starter"
+    "url": "https://github.com/codercredit/html-css-js-quickStartPack"
   },
   "keywords": [
     "npm",
@@ -49,6 +48,7 @@
   },
   "dependencies": {
     "gulp-nunjucks-render": "^2.2.3",
-    "nunjucks": "^3.2.0"
+    "nunjucks": "^3.2.0",
+    "rfs": "^9.0.5"
   }
 }
