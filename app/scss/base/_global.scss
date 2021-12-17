@@ -1,0 +1,506 @@
+/*------------------- 4.4 Global -------------------*/
+body {
+    color: $color_body_1;
+}
+h1 {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 20px;
+    color: $color_heading;
+    @media only screen and (max-width: 1199px) {
+        font-size: 44px;
+        line-height: 52px;
+    }
+    @media only screen and (max-width: 991px) {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    @media only screen and (max-width: 575px) {
+        font-size: 30px;  
+        line-height: 38px;  
+    }
+}
+h2 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 56px;
+    margin-bottom: 20px;
+    color: $color_heading;
+    @media only screen and (max-width: 1199px) {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    @media only screen and (max-width: 991px) {
+        font-size: 36px;
+        line-height: 42px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    @media only screen and (max-width: 575px) {
+        font-size: 26px;  
+        line-height: 30px;  
+    }
+}
+h3 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 15px;
+    color: $color_heading;
+    @media only screen and (max-width: 1199px) {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    @media only screen and (max-width: 991px) {
+        font-size: 26px;
+        line-height: 38px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    @media only screen and (max-width: 575px) {
+        font-size: 22px;  
+        line-height: 30px;  
+    }
+}
+h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    margin-bottom: 10px;
+    color: $color_heading;
+    @media only screen and (max-width: 1199px) {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    @media only screen and (max-width: 991px) {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+h5 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 10px;
+    color: $color_heading;
+}
+h6 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-bottom: 10px;
+    color: $color_heading;
+}
+
+a {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a:active,
+a:hover,
+a:focus {
+    outline: 0 none;
+    text-decoration: none;
+    color: $color_primary;
+}
+
+button:active,
+button:hover,
+button:focus {
+    outline: 0 none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    margin: 0;
+}
+pre code,
+code,
+a code {
+  color: #ee212b;
+}
+ul li {
+    margin: 5px 0;
+}
+figcaption {
+    margin-top: 10px;
+}
+cite {
+    width: 100%;
+    margin-top: 10px;
+    display: inline-block;
+}
+iframe {
+    width: 100%;
+    height: 500px;
+}
+/*------------------- 4.5 Helper Classes -------------------*/
+.rt-section-gap {
+    padding: 115px 0;
+    position: relative;
+    z-index: 1;
+}
+.p0 {
+    padding: 0 !important;
+}
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+    margin-left: 0;
+}
+.item-icon {
+    line-height: 1;
+    i {
+        display: inline-flex;
+    }
+    span.svg-img {
+       width: 90px; 
+       display: inline-block;
+    }
+}
+.gutter-enable {
+    .col {
+        margin-bottom: 30px;
+    }
+}
+.btn-wrap {
+    .item-btn {
+        font-size: 14px;
+        font-weight: 600;
+        color: $color_primary;
+        border: 1px solid $color_primary;
+        border-radius: 6px;
+        padding: 9px 25px;
+        i {
+            &:before {
+                font-size: 10px;
+                font-weight: 700;
+                margin-left: 6px;
+            }
+        }
+        &:hover {
+            color: $color_light;
+            background-color: $color_primary;
+        }
+    }
+    &.btn-v2 {
+        margin-top: 24px;
+        .item-btn {
+            margin: 0 10px 10px 0;
+            border: 1px solid $color_primary;
+            font-size: 14px;
+            font-weight: 600;
+            color: $color_light;
+            padding: 12px 18px;
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            border-radius: 0;
+            &:before {
+                content: "";
+                height: 100%;
+                width: 100%;
+                background-color: $color_primary;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                z-index: -1;
+                transition: all 0.3s ease-in-out;
+            }
+            i {
+                &:before {
+                    font-size: 14px;
+                    margin-left: 10px;
+                    font-weight: 400;
+                    display: block;
+                }
+            }
+            &:hover {
+                &:before {
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+    &.btn-v3 {
+        margin-bottom: 30px;
+        .item-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            width: 80px;
+            border-radius: 0;
+            background-color: $color_primary;
+            i {
+                &:before {
+                    font-size: 23px;
+                    color: $color_light;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+/* = Gradient Color = */
+.psudo-gradient-1 {
+    &:before {
+        background: linear-gradient(to bottom, #6B37FF, #377DFF);
+    }
+}
+.psudo-gradient-2 {
+    &:before {
+        background: linear-gradient(to bottom, #FF6F00, #FFAA00);
+    }
+}
+.psudo-gradient-3 {
+    &:before {
+        background: linear-gradient(to bottom, #3EBB64, #048998);
+    }
+}
+.psudo-gradient-4 {
+    &:before {
+        background: linear-gradient(to bottom, #43DFD1, #0E77EF);
+    }
+}
+.psudo-gradient-5 {
+    &:before {
+        background: linear-gradient(to bottom, #F15356, #D21EDF);
+    }
+}
+.primary-gradient {
+    background: linear-gradient(to right, #377DFF, #6B37FF) !important;
+}
+
+
+/* = Keyframe Animation = */
+@keyframes bubbleAnimateIn {
+    0% {
+        transform: scale(.4);
+        border-radius: 50%;
+    }
+
+    70% {
+        transform: scale(.4);
+        border-radius: 50%;
+    }
+
+    90% {
+        transform: scale(1);
+        border-radius: 50%;
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+@keyframes bubbleAnimateOut {
+    0% {
+        transform: scale(1);
+        border-radius: 80%;
+    }
+
+    70% {
+        transform: scale(.4);
+        border-radius: 60%;
+    }
+
+    100% {
+        transform: scale(.4);
+        border-radius: 50%;
+    }
+}
+@keyframes pulse2 {
+    0% {
+        box-shadow: 0 0 0 0 #377dff;
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(55,125,255,0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(55,125,255, 0);
+    }
+}
+
+/*------------------- 4.6 Back To Top -------------------*/
+.scrollup {
+    overflow: hidden;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    bottom: -100px;
+    right: 20px;
+    text-align: center;
+    z-index: 9999;
+    background-color: $color_primary;
+    color: $color_light;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.8s cubic-bezier(0, 0, .15, 1.88);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    i {
+        &:before {
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    &:hover {
+        background-color: $color_light;
+        i {
+            &:before {
+                color: $color_primary;
+            }
+        }
+    }
+    &:focus {
+        color: $color_light;
+    }
+}
+
+.scrollup.back-top {
+    bottom: 25px;
+}
+
+/* = Defauitl list = */
+.rt-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    li {
+        margin-bottom: 8px;
+        i {
+            margin-right: 7px;
+            display: flex;
+            &:before {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+.elementor-icon-list--layout-inline {
+    .rt-list {
+        li {
+            margin-right: 15px;
+            display: inline-flex;
+        }
+    }
+}
+
+/* = Preloader = */
+.pageoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000000;
+    .overlayDoor {
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background: #111;
+            opacity: .95;
+            transition: .5s cubic-bezier(.77,0,.18,1);
+            transition-delay: .8s;
+            -webkit-transition: all 0.3s 0.3s ease-out;
+            transition: all 0.3s 0.3s ease-out;
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0;
+        }
+    }
+    &.loaded {
+        .overlayDoor {
+            &:before {
+                left: -50%;
+            }
+            &:after {
+                right: -50%;
+            }
+        }
+        .overlayContent {
+            opacity: 0;
+        }
+    }
+    .overlayContent {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: .5s cubic-bezier(.77,0,.18,1);
+    }
+}
+.pageloader {
+    width: 128px;
+    height: 128px;
+    border: 3px solid $color_primary;
+    border-bottom: 3px solid transparent;
+    border-radius: 50%;
+    position: relative;
+    animation: spin 1s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .inner {
+        width: 64px;
+        height: 64px;
+        border: 3px solid transparent;
+        border-top: 3px solid $color_primary;
+        border-radius: 50%;
+        animation: spinInner 1s linear infinite;
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spinInner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-720deg);
+    }
+}
