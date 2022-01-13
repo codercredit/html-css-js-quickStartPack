@@ -1,73 +1,138 @@
-$(document).ready(function () {
-  $("select").niceSelect();
+"use strict";
 
-  // Scroll Top Smooth Animation
-  $("#scroll").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 600);
-    return false;
+/**************************************
+***** 1. Always Active but When Another Item hover then current active remove
+**************************************/
+$(".btn--cart").hover(function () {
+  $(".btn--cart").removeClass("btn--cart--active");
+  $(this).addClass("btn--cart--active");
+});
+
+/**************************************
+***** 2. Bootstrap Tooltip
+****************************/
+$(function () {
+  $('[data-bs-toggle="tooltip"]').tooltip({
+    offset: [0, 5],
   });
+});
 
-  /*-----------------------
-  --> Off Canvas Menu
-  -------------------------*/
-  /*Variables*/
-  var $offCanvasNav = $(".off-canvas-nav"),
-    $offCanvasNavSubMenu = $offCanvasNav.find(".sub-menu");
+/**************************************
+***** 3. Preloader
+**************************************/
+$(window).on("load", function () {
+  let preloader = $("#preloader");
+  preloader &&
+    $("#preloader").fadeOut("slow", function () {
+      $(this).remove();
+    });
+});
 
-  /*Add Toggle Button With Off Canvas Sub Menu*/
-  // $offCanvasNavSubMenu.parent().prepend('<span class="menu-expand"><i class="fas fa-chevron-down"></i></span>');
-
-  /*Close Off Canvas Sub Menu*/
-  // $offCanvasNavSubMenu.slideUp();
-
-  /*Category Sub Menu Toggle*/
-  $offCanvasNav.on("click", "li a, li .menu-expand", function (e) {
-    var $this = $(this);
-    if (
-      $this
-        .parent()
-        .attr("class")
-        .match(/\b(menu-item-has-children|has-children|has-sub-menu)\b/) &&
-      ($this.attr("href") === "#" || $this.hasClass("menu-expand"))
-    ) {
-      e.preventDefault();
-      if ($this.siblings("ul:visible").length) {
-        $this.parent("li").removeClass("active");
-        $this.siblings("ul").slideUp();
-      } else {
-        $this.parent("li").addClass("active");
-        $this.closest("li").siblings("li").find("ul:visible").slideUp();
-        $this.siblings("ul").slideDown();
-      }
+/**************************************
+***** 4. Menu Active Class Current Page
+**************************************/
+function menuActiveClass() {
+  let currentPage = location.pathname.split("/"),
+    current = currentPage[1];
+  $(".mainMenu__nav ul li a").each(function () {
+    let $this = $(this);
+    if ($this.attr("href") === current) {
+      $this.addClass("mainMenu__active");
+      $this.parents(".mainMenu__child").addClass("mainMenu__active");
     }
   });
+}
+menuActiveClass();
 
-  // Off Canvas Open close
-  $(".offcanvas-btn").on("click", function () {
-    $(".off-canvas-wrapper").addClass("open").removeClass("menu-close");
-    $("body").addClass("body-overlay offcanvas");
+/**************************************
+***** 5. RadiusTheme Swiper Slider Activation
+**************************************/
+$(".rt-slider-style-1").each(function (i) {
+  let rtSliderStyle = $(this).get(0);
+  let prev = $(this).parents(".rt-slide-wrap").find(".btn-prev").get(0);
+  let next = $(this).parents(".rt-slide-wrap").find(".btn-next").get(0);
+
+  new Swiper(rtSliderStyle, {
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 30,
+    slideToClickedSlide: true,
+    autoplay: {
+      delay: 5000,
+    },
+    navigation: {
+      nextEl: next,
+      prevEl: prev,
+    },
+    speed: 800,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      575: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 3.9,
+      },
+      1024: {
+        slidesPerView: 5,
+      },
+      1200: {
+        slidesPerView: 7,
+      },
+    },
   });
-
-  $(".btn-close-off-canvas").on("click", function () {
-    $(".off-canvas-wrapper").removeClass("open").addClass("menu-close");
-    $("body").removeClass("body-overlay offcanvas");
-  });
-
-  function clickDom() {
-    $("body").on("click", function (e) {
-      if ($("body").hasClass("searchbar-visible")) {
-        $("body").removeClass("searchbar-visible");
-      }
-      if ($(".off-canvas-wrapper").hasClass("open")) {
-        $(".off-canvas-wrapper").removeClass("open").addClass("menu-close");
-      }
-      if ($("body").hasClass("body-overlay offcanvas")) {
-        $("body").removeClass("body-overlay offcanvas");
-      }
-    });
-    $(".off-canvas-wrapper,.offcanvas-btn").on("click", function (e) {
-      e.stopPropagation();
-    });
-  }
-  clickDom();
 });
+
+/**************************************
+***** 6. Data Background Image Attribute
+**************************************/
+function imageFunction() {
+  $("[data-bg-image]").each(function () {
+    let img = $(this).data("bg-image");
+    $(this).css({
+      backgroundImage: "url(" + img + ")",
+    });
+  });
+}
+imageFunction();
+
+/**************************************
+***** 7. Wow For Animation
+**************************************/
+let wow = new WOW({
+  boxClass: "wow",
+  animateClass: "animate__animated ",
+  offset: 0,
+  mobile: false,
+  live: true,
+  scrollContainer: null,
+});
+wow.init();
+
+/**************************************
+***** 8. Header Sticky
+**************************************/
+$(window).on("scroll", function () {
+  if ($("header").hasClass("sticky-on")) {
+    var stickyPlaceHolder = $("#sticky-placeholder"),
+      menu = $("#navbar-wrap"),
+      menuH = menu.outerHeight(),
+      topbarH = $("#topbar-wrap").outerHeight() || 0,
+      targrtScroll = topbarH,
+      header = $("header");
+    if ($(window).scrollTop() > targrtScroll) {
+      header.addClass("sticky");
+      stickyPlaceHolder.height(menuH);
+    } else {
+      header.removeClass("sticky");
+      stickyPlaceHolder.height(0);
+    }
+  }
+});
+
+/**************************************
+***** 8. Nice Select For Selection
+**************************************/
+$("select").niceSelect();

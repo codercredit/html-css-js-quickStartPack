@@ -8,6 +8,8 @@
 	<meta name="author" content="" />
 	<title>{{ title }} {% block title %} {% endblock %}</title>
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="assets/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="assets/nice-select/nice-select.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -21,14 +23,13 @@
 		{% endblock %}
 	</main>
 
-	<footer class="footer mt-auto bg-light">
-		{% block footer %}
-		{% endblock %}
+	<footer class="footer mt-auto bg-light">		
 		{% include "footer/_footer.html" %}
 	</footer>
 
 	<script src="assets/jquery/jquery.min.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/swiper/swiper-bundle.min.js"></script>
 	<script src="assets/nice-select/jquery.nice-select.min.js"></script>
 	<script src="js/custom.js"></script>
 </body>
