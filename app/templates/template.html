@@ -14,18 +14,13 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="d-flex flex-column h-100">
-	<header>
-		{% include "header/_header.html" %}
-	</header>
-	<main role="main" class="site-wrapper overflow-hidden">
-		{% block main %}
-		{% endblock %}
-	</main>
+<body>
 
-	<footer class="footer mt-auto bg-light">		
-		{% include "footer/_footer.html" %}
-	</footer>
+
+	{% block main %}
+
+	{% endblock %}
+
 
 	<script src="assets/jquery/jquery.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
